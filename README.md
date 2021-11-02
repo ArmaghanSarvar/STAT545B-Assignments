@@ -5,3 +5,12 @@ This repository is made for my Assignments for the UBC STAT 545B course 💻
 ## Assignment B-1 Folder:
 * *AssignmentB-1.Rmd:* contains the R markdown file for assignment 1 (can be run in RStudio.)
 * *AssignmentB-1.Rmd:* contains the knitted .md file for assignment 1.
+
+
+
+## If you want to extend/ improve the code
+* Make a new branch
+* Pull the repository (you need to install R studio)
+* Change any file
+* Commit, and push the editted repository to GitHub
+* Create a pull request 
