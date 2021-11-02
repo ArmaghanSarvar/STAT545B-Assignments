@@ -1,5 +1,5 @@
 ---
-title: "Assignment1"
+title: "Assignment B-1"
 author: "Armaghan Sarvar"
 output: github_document
 ---
@@ -60,6 +60,7 @@ my_function <- function(dataset, feature, variable) {
 
 
 # Exercise 3: Include examples
+Here, we will demonstrate the usage of the implemented function with a few examples. 
 
 * Example 1
 

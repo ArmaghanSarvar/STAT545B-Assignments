@@ -1,4 +1,4 @@
-Assignment1
+Assignment B-1
 ================
 Armaghan Sarvar
 
@@ -92,6 +92,9 @@ my_function <- function(dataset, feature, variable) {
 ```
 
 # Exercise 3: Include examples
+
+Here, we will demonstrate the usage of the implemented function with a
+few examples.
 
 -   Example 1
 
@@ -278,4 +281,4 @@ function_testing <- test_that("Testing the implemented function", {
 })
 ```
 
-    ## Test passed 😸
+    ## Test passed 🥇
