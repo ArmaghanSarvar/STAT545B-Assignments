@@ -6,7 +6,7 @@ This repository is made for my Assignments for the UBC STAT 545B course 💻
 In this assignment, the following materials have been covered:
 - Making a function in R
 - Documenting the function 
-- Testing the function. 
+- Testing the function
 
 
 The files are:
