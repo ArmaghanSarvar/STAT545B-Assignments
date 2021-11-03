@@ -159,7 +159,7 @@ functionality we want in the `my_function` function, and we do not have
 to rewrite the code inside our function for every different possible
 `dataset`, `feature` and `variable` value.
 
--   Providing examples for other sample function inputs: \*
+-   Providing examples for other sample function inputs:
 
 -   Example 2
 
@@ -267,8 +267,8 @@ my_function(flow_sample, year, flow)
 # Exercise 4: Test the Function
 
 Here, we aim to write a formal testing for the implemented function. I
-test the conditions that have been implemented in the functions
-regarding the criteria each input argument should follow.
+test the conditions that have been implemented in the function
+`my_function` regarding the criteria each input argument should follow.
 
 ``` r
 function_testing <- test_that("Testing the implemented function", {
