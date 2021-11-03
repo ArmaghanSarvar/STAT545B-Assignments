@@ -204,7 +204,7 @@ library(tidyverse)  # provides data analysis libraries</code></pre>
 <li>making a function, fortifying and documenting it. *</li>
 </ul>
 <p>The implemented function computes the range, mean, standard deviation and median of a variable across the groups of another variable from the input dataset. I have also edited the implemented function so that it includes conditions that check the input arguments. More specifically, I first check the type of the first argument which has to be of the dataframe class, and considering the fact that the <code>feature</code> input is not limited to any criteria here, I also check whether the <code>variable</code> input is numeric. Finally, I check whether the length of the <code>feature</code> and <code>variable</code> vectors is not zero.</p>
-<pre class="r"><code>#&#39; Using roxygen to document the function defined in the last section 
+<pre class="r"><code>#&#39; Using roxygen to document the function defined 
 #&#39; @title Statistical Measurements for a Dataset Variable
 #&#39; @description Computing the range, mean, median, and standard deviation of a variable across the groups of a feature from a dataset.
 #&#39; @param dataset: The Tibble or Dataframe that the function will look at in order to extract the above information
@@ -375,7 +375,7 @@ print(cancer_sample_summary)</code></pre>
   expect_true(is.data.frame(cancer_sample))
   expect_true(is.numeric(cancer_sample$area_mean))
 })</code></pre>
-<pre><code>## Test passed 😀</code></pre>
+<pre><code>## Test passed 😸</code></pre>
 </div>
 
 
