@@ -284,7 +284,7 @@ print(cancer_sample_summary)</code></pre>
 ## # … with 1 more variable: sd(area_mean) &lt;dbl&gt;</code></pre>
 <p>As we can see, the output is the same, so we have successfully put the functionality we want in the <code>my_function</code> function, and we do not have to rewrite the code inside our function for every different possible <code>dataset</code>, <code>feature</code> and <code>variable</code> value.</p>
 <ul>
-<li><p>Providing examples for other sample function inputs: *</p></li>
+<li><p>Providing examples for other sample function inputs:</p></li>
 <li><p>Example 2</p></li>
 </ul>
 <pre class="r"><code>vancouver_trees</code></pre>
@@ -366,7 +366,7 @@ print(cancer_sample_summary)</code></pre>
 </div>
 <div id="exercise-4-test-the-function" class="section level1">
 <h1>Exercise 4: Test the Function</h1>
-<p>Here, we aim to write a formal testing for the implemented function. I test the conditions that have been implemented in the functions regarding the criteria each input argument should follow.</p>
+<p>Here, we aim to write a formal testing for the implemented function. I test the conditions that have been implemented in the function <code>my_function</code> regarding the criteria each input argument should follow.</p>
 <pre class="r"><code>function_testing &lt;- test_that(&quot;Testing the implemented function&quot;, {
   expect_error(my_function(&#39;cancer_sample&#39;, diagnosis, area_mean))
   expect_error(my_function(vancouver_trees, genus_name, std_street))
@@ -375,7 +375,7 @@ print(cancer_sample_summary)</code></pre>
   expect_true(is.data.frame(cancer_sample))
   expect_true(is.numeric(cancer_sample$area_mean))
 })</code></pre>
-<pre><code>## Test passed 😸</code></pre>
+<pre><code>## Test passed 🎊</code></pre>
 </div>
 
 
