@@ -24,7 +24,7 @@ The implemented function computes the range, mean, standard deviation and median
 I have also edited the implemented function so that it includes conditions that check the input arguments. More specifically, I first check the type of the first argument which has to be of the dataframe class, and considering the fact that the `feature` input is not limited to any criteria here, I also check whether the `variable` input is numeric. Finally, I check whether the length of the `feature` and `variable` vectors is not zero. 
 
 ```{r}
-#' Using roxygen to document the function defined in the last section 
+#' Using roxygen to document the function defined 
 #' @title Statistical Measurements for a Dataset Variable
 #' @description Computing the range, mean, median, and standard deviation of a variable across the groups of a feature from a dataset.
 #' @param dataset: The Tibble or Dataframe that the function will look at in order to extract the above information
