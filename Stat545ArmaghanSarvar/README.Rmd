@@ -50,14 +50,14 @@ In the following, you can find some examples on the demonstrated usage of the pr
 ```{r}
 library(Stat545ArmaghanSarvar)
 #' @example
-#' # An example of the function ran in Flow_Samples data set
-#my_function(datateachr::flow_sample,month,flow)
+# An example of the function ran on the flow_sample data set
+my_function(datateachr::flow_sample, year, flow)
 #' @example
-#' # An example of the function ran in Vancouver_Trees data set
-# my_function(datateachr::cancer_sample, diagnosis, area_mean)
+# An example of the function ran on the cancer_sample data set
+my_function(datateachr::cancer_sample, diagnosis, area_mean)
 #' @example
-#' # An example of the function ran in Cancer_Sample data set
-#my_function(datateachr::cancer_sample,diagnosis,radius_mean)
+# An example of the function ran on the vancouver_trees data set
+my_function(datateachr::vancouver_trees, genus_name, diameter)
 ```
 
 

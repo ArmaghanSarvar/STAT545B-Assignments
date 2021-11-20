@@ -27,9 +27,9 @@ I have also edited the implemented function so that it includes conditions that 
 #' Using roxygen to document the function defined 
 #' @title Statistical Measurements for a Dataset Variable
 #' @description Computing the range, mean, median, and standard deviation of a variable across the groups of a feature from a dataset.
-#' @param dataset: The Tibble or Dataframe that the function will look at in order to extract the above information
-#' @param feature: The dataset column that we want to group the categories for
-#' @param variable: The dataset column that we want to calculate statistics on
+#' @param dataset The Tibble or Dataframe that the function will look at in order to extract the above information
+#' @param feature The dataset column that we want to group the categories for
+#' @param variable The dataset column that we want to calculate statistics on
 #' @return A tibble, showing the statistics calculated
 
 my_function <- function(dataset, feature, variable) {
