@@ -9,7 +9,7 @@ In this assignment, the following materials have been covered:
 - Testing the function
 
 
-The files for this milestone that are included in the Assignment B-1 folder are:
+The files for this milestone that are included in the AssignmentB1 folder are:
 * *AssignmentB-1.Rmd:* contains the R markdown file for assignment 1 (can be run in RStudio.)
 * *AssignmentB-1.md:* contains the knitted .md file for assignment 1.
 
