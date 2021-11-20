@@ -15,7 +15,7 @@ The files for this milestone are:
 
 ## Assignment B-2:
 In this assignment, the function implemented in the previous milestone has been wrapped into an R package named `Stat545ArmaghanSarvar`.
-The detailed documentation of this package has been provided in the folder with the same name.
+The detailed documentation of this package has been provided in the repository folder with the same name.
 
 ## If you want to extend/ improve the code
 * Make a new branch
