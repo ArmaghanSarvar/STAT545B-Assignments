@@ -1,0 +1,140 @@
+---
+title: "Assignment B-1"
+author: "Armaghan Sarvar"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Loading the the Necessary Packages
+
+```{r}
+library(datateachr)  # provides 7 semi-tidy datasets
+library(tidyverse)  # provides data analysis libraries
+library(testthat)
+```
+
+# Exercise 1 and 2: Make a Function and Document it
+
+* making a function, fortifying and documenting it. *
+
+The implemented function computes the range, mean, standard deviation and median of a variable across the groups of another variable from the input dataset.
+I have also edited the implemented function so that it includes conditions that check the input arguments. More specifically, I first check the type of the first argument which has to be of the dataframe class, and considering the fact that the `feature` input is not limited to any criteria here, I also check whether the `variable` input is numeric. Finally, I check whether the length of the `feature` and `variable` vectors is not zero. 
+
+```{r}
+#' Using roxygen to document the function defined 
+#' @title Statistical Measurements for a Dataset Variable
+#' @description Computing the range, mean, median, and standard deviation of a variable across the groups of a feature from a dataset.
+#' @param dataset: The Tibble or Dataframe that the function will look at in order to extract the above information
+#' @param feature: The dataset column that we want to group the categories for
+#' @param variable: The dataset column that we want to calculate statistics on
+#' @return A tibble, showing the statistics calculated
+
+my_function <- function(dataset, feature, variable) {
+    if(!is.data.frame(dataset)) {
+      stop('Your first argument should be of type dataframe. However, your input dataset is of class:', class(dataset))
+    }
+   calculations <- dplyr::summarise(
+    dataset,
+    is_numeric_variable = is.numeric({{ variable }}),
+    class_variable = class({{ variable }}),
+    length_variable = length({{variable}}),
+    length_feature = length({{feature}})
+  )
+  if (!calculations$is_numeric_variable) {
+    stop("`variable` column must be numeric, but it is an object of class ",
+         calculations$class_variable)
+  }
+  if(calculations$length_variable == 0 | calculations$length_feature == 0){
+    stop('One of the variable or feature input arguments is of length zero!')
+  }
+  output <- (dataset %>%
+  group_by({{feature}}) %>%
+  summarize(range({{variable}})[1], range({{variable}})[2], mean({{variable}}), median({{variable}}), sd({{variable}})))
+  return(output)
+}
+
+```
+
+
+# Exercise 3: Include examples
+Here, we will demonstrate the usage of the implemented function with a few examples. 
+
+* Example 1
+
+```{r}
+cancer_sample
+```
+
+First, I will rewrite what the function does in the below code chunk separately to have a performance baseline.
+
+```{r}
+cancer_sample_summary <- cancer_sample %>% 
+              group_by(diagnosis) %>%
+              summarize(range(area_mean)[1], range(area_mean)[2], mean(area_mean), median(area_mean), sd(area_mean))
+print(cancer_sample_summary)
+
+```
+
+Here, I will call the function with the same input arguments as the baseline chunk above for comparison.
+
+```{r}
+my_function(cancer_sample, diagnosis, area_mean)
+```
+As we can see, the output is the same, so we have successfully put the functionality we want in the `my_function` function, and we do not have to rewrite the code inside our function for every different possible `dataset`, `feature` and `variable` value. 
+
+* Providing examples for other sample function inputs:
+
+* Example 2
+
+```{r}
+vancouver_trees
+```
+
+Testing the function when we want to have the summary statistics of the `diameter` variable considering the categories of the `genus_name` feature. 
+
+```{r}
+my_function(vancouver_trees, genus_name, diameter)
+```
+
+* Example 3
+
+Now, let's deliberately show an error which can happen due to the `variable` column being non-numeric.
+
+```{r error = TRUE}
+my_function(vancouver_trees, genus_name, std_street)
+```
+
+* Example 4
+
+```{r}
+flow_sample
+```
+
+Testing the function when we want to have the summary statistics of the `flow` variable considering different values of the `year` feature. 
+
+```{r}
+my_function(flow_sample, year, flow)
+```
+
+
+# Exercise 4: Test the Function
+
+Here, we aim to write a formal testing for the implemented function. I test the conditions that have been implemented in the function `my_function` regarding the criteria each input argument should follow.
+
+```{r}
+function_testing <- test_that("Testing the implemented function", {
+  expect_error(my_function('cancer_sample', diagnosis, area_mean))
+  expect_error(my_function(vancouver_trees, genus_name, std_street))
+  expect_error(my_function(cancer_sample, diagnosis, numeric(0)))
+  expect_error(my_function(cancer_sample, numeric(0), area_mean))
+  expect_true(is.data.frame(cancer_sample))
+  expect_true(is.numeric(cancer_sample$area_mean))
+})
+```
+
+
+
+
