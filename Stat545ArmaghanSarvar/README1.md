@@ -9,11 +9,13 @@ In this assignment, the following materials have been covered:
 - Testing the function
 
 
-The files are:
+The files for this milestone are:
 * *AssignmentB-1.Rmd:* contains the R markdown file for assignment 1 (can be run in RStudio.)
 * *AssignmentB-1.md:* contains the knitted .md file for assignment 1.
 * *AssignmentB-1.html:* contains the output html file for assignment 1. It can be directly viewed in:
 http://htmlpreview.github.io/?https://github.com/stat545ubc-2021/STAT545B-Assignments/blob/main/AssignmentB-1.html
+
+## Assignment B-2:
 
 
 ## If you want to extend/ improve the code
