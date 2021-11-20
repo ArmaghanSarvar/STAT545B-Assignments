@@ -2,7 +2,10 @@ Package: Stat545ArmaghanSarvar
 Title: Function for Dataset Statistical Measurements
 Version: 0.1.0
 Authors@R: 
-    person("Armaghan", "Sarvar", role = c("aut", "cre"))
+    person(given="Armaghan", 
+          family="Sarvar", 
+          rol=c("aut", "cre"),
+          email="armaghansarvar@gmail.com")
 Description: The `Stat545ArmaghanSarvar` package provides a function named `my_function` that computes summary statistics range, mean, standard deviation and median of a variable across the groups of another variable from an input dataset in the datateachr package. 
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -11,6 +14,7 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Imports: 
     datateachr,
+    dplyr,
     magrittr,
     roxygen2,
     tidyverse

@@ -1,10 +1,10 @@
 #' @title Statistical Measurements for a Dataset Variable
 #' @description Computing the range, mean, median, and standard deviation of a variable across the groups of a feature from a dataset.
-#' @param dataset: The Tibble or Dataframe that the function will look at in order to extract the above information
-#' @param feature: The dataset column that we want to group the categories for
-#' @param variable: The dataset column that we want to calculate statistics on
+#' @param dataset The Tibble or Dataframe that the function will look at in order to extract the above information
+#' @param feature The dataset column that we want to group the categories for
+#' @param variable The dataset column that we want to calculate statistics on
 #' @return A tibble, showing the statistics calculated
-#' #' @examples
+#' @examples
 #' my_function(datateachr::cancer_sample, diagnosis, area_mean)
 #' my_function(datateachr::vancouver_trees, genus_name, diameter)
 #' @export
@@ -27,7 +27,7 @@ my_function <- function(dataset, feature, variable) {
     stop('One of the variable or feature input arguments is of length zero!')
   }
   output <- (dataset %>%
-               group_by({{feature}}) %>%
-               summarize(range({{variable}})[1], range({{variable}})[2], mean({{variable}}), median({{variable}}), sd({{variable}})))
+               dplyr::group_by({{feature}}) %>%
+               dplyr::summarize(range({{variable}})[1], range({{variable}})[2], mean({{variable}}), stats::median({{variable}}), stats::sd({{variable}})))
   return(output)
 }

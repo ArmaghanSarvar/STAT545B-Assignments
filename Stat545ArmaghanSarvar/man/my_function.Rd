@@ -7,18 +7,19 @@
 my_function(dataset, feature, variable)
 }
 \arguments{
-\item{dataset:}{The Tibble or Dataframe that the function will look at in order to extract the above information}
+\item{dataset}{The Tibble or Dataframe that the function will look at in order to extract the above information}
 
-\item{feature:}{The dataset column that we want to group the categories for}
+\item{feature}{The dataset column that we want to group the categories for}
 
-\item{variable:}{The dataset column that we want to calculate statistics on}
+\item{variable}{The dataset column that we want to calculate statistics on}
 }
 \value{
 A tibble, showing the statistics calculated
-#' @examples
-my_function(datateachr::cancer_sample, diagnosis, area_mean)
-my_function(datateachr::vancouver_trees, genus_name, diameter)
 }
 \description{
 Computing the range, mean, median, and standard deviation of a variable across the groups of a feature from a dataset.
+}
+\examples{
+my_function(datateachr::cancer_sample, diagnosis, area_mean)
+my_function(datateachr::vancouver_trees, genus_name, diameter)
 }
