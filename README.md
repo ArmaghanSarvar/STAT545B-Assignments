@@ -9,12 +9,12 @@ In this assignment, the following materials have been covered:
 - Testing the function
 
 
-The files for this milestone are:
+The files for this milestone that are included in the AssignmentB1 folder are:
 * *AssignmentB-1.Rmd:* contains the R markdown file for assignment 1 (can be run in RStudio.)
 * *AssignmentB-1.md:* contains the knitted .md file for assignment 1.
 
 ## Assignment B-2:
-In this assignment, the function implemented in the previous milestone has been wrapped into an R package named `Stat545ArmaghanSarvar`.
+In this assignment, the function implemented in the previous milestone (Assignment B-1) has been wrapped into an R package named `Stat545ArmaghanSarvar`.
 The detailed documentation of this package has been provided in the repository folder with the same name.
 
 ## If you want to extend/ improve the code
