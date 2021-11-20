@@ -1,5 +1,5 @@
 Package: Stat545ArmaghanSarvar
-Title: Function for Dataset Statistical Measurements
+Title: Function for Dataset Variables Statistical Measurements
 Version: 0.1.0
 Authors@R: 
     person(given="Armaghan", 
