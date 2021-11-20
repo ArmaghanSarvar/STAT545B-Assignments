@@ -1,6 +1,5 @@
-README
+Package High-level Documentation
 ================
-Armaghan Sarvar
 
 ## Package Description
 
