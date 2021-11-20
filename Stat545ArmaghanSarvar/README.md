@@ -1,4 +1,4 @@
-Package Documentation
+Package High-level Documentation
 ================
 
 ## Package Description
