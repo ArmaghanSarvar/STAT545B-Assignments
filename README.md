@@ -17,6 +17,7 @@ http://htmlpreview.github.io/?https://github.com/stat545ubc-2021/STAT545B-Assign
 
 ## Assignment B-2:
 In this assignment, the function implemented in the previous milestone has been wrapped into an R package.
+The detailed documentation of this package has been provided in the `Stat545ArmaghanSarvar` folder.
 
 ## If you want to extend/ improve the code
 * Make a new branch
