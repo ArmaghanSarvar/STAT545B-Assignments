@@ -1,19 +1,54 @@
-Package High-level Documentation
+STAT545B Assignment B2
 ================
+Armaghan Sarvar
 
-## Package Description
+# Package Description
 
-The `Stat545ArmaghanSarvar` package provides a function named
-`my_function` that computes summary statistics range, mean, standard
-deviation and median of a variable across the groups of another variable
-from an input dataset in the datateachr package.
+**Package name:** Stat545ArmaghanSarvar
+
+**Package latest version:** 0.1.0
+
+The `Stat545ArmaghanSarvar` package is made by Armaghan Sarvar for the
+STAT545B course at the University of British Columbia. The main goal of
+this package is to make data analysis more efficient for different R
+users. This package provides a function named `my_function` that
+computes summary statistics range, mean, standard deviation and median
+of a variable across the groups of another variable from an input
+dataset in the datateachr package.
 
 ## Installation Instructions
 
-The latest version of the `Stat545ArmaghanSarvar` package can be
-installed by
+The released development version of the `Stat545ArmaghanSarvar` package
+can be installed by running:
 
-## Demonstrated Usage
+``` r
+# install.packages("devtools")
+devtools::install_github("https://github.com/ArmaghanSarvar/STAT545B-Assignments/tree/main/Stat545ArmaghanSarvar")
+```
 
-In the following, you can find some examples on the usage of the
-provided package.
+Then, you can load the package with:
+
+``` r
+library("Stat545ArmaghanSarvar")
+```
+
+Note that once the package is submitted to CRAN, the final released
+version with the final installation instructions will become available.
+
+## Usage Example
+
+In the following, you can find some examples on the demonstrated usage
+of the provided package.
+
+``` r
+library(Stat545ArmaghanSarvar)
+#' @example
+#' # An example of the function ran in Flow_Samples data set
+#my_function(datateachr::flow_sample,month,flow)
+#' @example
+#' # An example of the function ran in Vancouver_Trees data set
+# my_function(datateachr::cancer_sample, diagnosis, area_mean)
+#' @example
+#' # An example of the function ran in Cancer_Sample data set
+#my_function(datateachr::cancer_sample,diagnosis,radius_mean)
+```

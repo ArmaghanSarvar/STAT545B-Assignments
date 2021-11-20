@@ -54,7 +54,7 @@ library(Stat545ArmaghanSarvar)
 #my_function(datateachr::flow_sample,month,flow)
 #' @example
 #' # An example of the function ran in Vancouver_Trees data set
-my_function(datateachr::cancer_sample, diagnosis, area_mean)
+# my_function(datateachr::cancer_sample, diagnosis, area_mean)
 #' @example
 #' # An example of the function ran in Cancer_Sample data set
 #my_function(datateachr::cancer_sample,diagnosis,radius_mean)
