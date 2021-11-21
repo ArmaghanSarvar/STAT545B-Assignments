@@ -32,7 +32,7 @@ installed by running:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("https://github.com/ArmaghanSarvar/STAT545B-Assignments/tree/main/Stat545ArmaghanSarvar")
+devtools::install_github("ArmaghanSarvar/STAT545B-Assignments/Stat545ArmaghanSarvar/")
 ``` 
 
 Then, you can load the package with:
@@ -45,16 +45,22 @@ Note that once the package is submitted to CRAN, the final released version with
 
 ## Usage Example
 
-In the following, you can find some examples on the demonstrated usage of the provided package.
+In the following, you can find some examples on the demonstrated usage of the provided package. 
+Note that the type of the first argument has to be of the
+dataframe class, and also the `variable` input (the third argument) is numeric. Finally, the length of the `feature` and `variable` vectors should not be zero.
+
 
 ```{r}
 library(Stat545ArmaghanSarvar)
+
 #' @example
 # An example of the function ran on the flow_sample data set
 my_function(datateachr::flow_sample, year, flow)
+
 #' @example
 # An example of the function ran on the cancer_sample data set
 my_function(datateachr::cancer_sample, diagnosis, area_mean)
+
 #' @example
 # An example of the function ran on the vancouver_trees data set
 my_function(datateachr::vancouver_trees, genus_name, diameter)

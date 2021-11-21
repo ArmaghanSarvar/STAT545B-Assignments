@@ -23,7 +23,7 @@ can be installed by running:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("https://github.com/ArmaghanSarvar/STAT545B-Assignments/tree/main/Stat545ArmaghanSarvar")
+devtools::install_github("ArmaghanSarvar/STAT545B-Assignments/Stat545ArmaghanSarvar/")
 ```
 
 Then, you can load the package with:
@@ -38,10 +38,14 @@ version with the final installation instructions will become available.
 ## Usage Example
 
 In the following, you can find some examples on the demonstrated usage
-of the provided package.
+of the provided package. Note that the type of the first argument has to
+be of the dataframe class, and also the `variable` input (the third
+argument) is numeric. Finally, the length of the `feature` and
+`variable` vectors should not be zero.
 
 ``` r
 library(Stat545ArmaghanSarvar)
+
 #' @example
 # An example of the function ran on the flow_sample data set
 my_function(datateachr::flow_sample, year, flow)
@@ -59,6 +63,7 @@ my_function(datateachr::flow_sample, year, flow)
 #>  9  1917             6.06              174         90.0                  90.0
 #> 10  1918             6.03              345        176.                  176. 
 #> # … with 99 more rows, and 1 more variable: stats::sd(flow) <dbl>
+
 #' @example
 # An example of the function ran on the cancer_sample data set
 my_function(datateachr::cancer_sample, diagnosis, area_mean)
@@ -68,6 +73,7 @@ my_function(datateachr::cancer_sample, diagnosis, area_mean)
 #> 1 B                      144.             992.             463.             458.
 #> 2 M                      362.            2501              978.             932 
 #> # … with 1 more variable: stats::sd(area_mean) <dbl>
+
 #' @example
 # An example of the function ran on the vancouver_trees data set
 my_function(datateachr::vancouver_trees, genus_name, diameter)
